@@ -38,18 +38,18 @@ GNU_INSTALL_ROOT := /usr/
 ## Clone repository
 Inside nRF5_SDK_11/
 ```
-git clone https://github.com/reversebias/mitosis
+git clone https://github.com/satt99/comet46-firmware
 ```
 
 ## Install udev rules
 ```
-sudo cp comet46/49-stlinkv2.rules /etc/udev/rules.d/
+sudo cp comet46-firmware/49-stlinkv2.rules /etc/udev/rules.d/
 ```
 Plug in, or replug in the programmer after this.
 
 ## OpenOCD server
-The programming header on the keyboard, from top to bottom:  
-(Check the silk screen on PCBs.)
+The programming header on the keyboard, from right to left:  
+(Check the silk screen on PCBs for orders.)
 ```
 SWDIO
 SWCLK
@@ -61,7 +61,7 @@ It's best to remove the battery during long sessions of debugging, as charging n
 
 Launch a debugging session with:
 ```
-openocd -f mitosis/nrf-stlink.cfg
+openocd -f comet46-firmware/nrf-stlink.cfg
 ```
 Should give you an output ending in:
 ```
