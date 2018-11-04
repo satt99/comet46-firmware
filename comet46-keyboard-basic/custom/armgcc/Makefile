@@ -39,6 +39,7 @@ remduplicates = $(strip $(if $1,$(firstword $1) $(call remduplicates,$(filter-ou
 C_SOURCE_FILES += \
 $(abspath ../../../../components/toolchain/system_nrf51.c) \
 $(abspath ../../main.c) \
+$(abspath ../../debounce.c) \
 $(abspath ../../../../components/drivers_nrf/delay/nrf_delay.c) \
 $(abspath ../../../../components/drivers_nrf/clock/nrf_drv_clock.c) \
 $(abspath ../../../../components/libraries/util/app_util_platform.c) \
