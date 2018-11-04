@@ -3,6 +3,9 @@ Firmware for Nordic MCUs used in the Comet46 Keyboard, contains precompiled .hex
 
 The firmware was originally developed by [reversebias](https://github.com/reversebias) for the [Mitosis keyboard](https://github.com/reversebias/mitosis) and has been modified to work with Comet46.
 
+The firmware has been updated based on [repne's branch of mitosis](https://github.com/repne/mitosis).
+This update "should" extend the battery life from 1-2 months to 6 months. (Actual battery life is currently being tested.)
+
 ## Install dependencies
 
 Tested on Ubuntu 16.04.2, but should be able to find alternatives on all distros. 
@@ -15,7 +18,7 @@ sudo apt install openocd gcc-arm-none-eabi
 
 Nordic does not allow redistribution of their SDK or components, so download and extract from their site:
 
-https://www.nordicsemi.com/eng/nordic/Products/nRF5-SDK/nRF5-SDK-v12-zip/54291
+https://developer.nordicsemi.com/nRF5_SDK/nRF5_SDK_v11.x.x/
 
 Firmware written and tested with version 11
 
@@ -87,7 +90,7 @@ echo reset | telnet localhost 4444
 To use the automatic build scripts:
 ```
 cd comet46-firmware/comet46-keyboard-basic
-./program.sh
+sudo ./program.sh
 ```
 An openocd session should be running in another terminal, as this script sends commands to it.
 
