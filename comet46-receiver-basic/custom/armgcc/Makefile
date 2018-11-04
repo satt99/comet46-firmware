@@ -1,4 +1,4 @@
-PROJECT_NAME := mitosis-receiver-basic
+PROJECT_NAME := comet46-receiver-basic
 
 export OUTPUT_FILENAME
 #MAKEFILE_NAME := $(CURDIR)/$(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))
@@ -49,6 +49,8 @@ $(abspath ../../../../components/libraries/uart/app_uart_fifo.c) \
 $(abspath ../../../../components/drivers_nrf/delay/nrf_delay.c) \
 $(abspath ../../../../components/drivers_nrf/common/nrf_drv_common.c) \
 $(abspath ../../../../components/drivers_nrf/uart/nrf_drv_uart.c) \
+$(abspath ../../../../components/drivers_nrf/rtc/nrf_drv_rtc.c) \
+$(abspath ../../../../components/drivers_nrf/clock/nrf_drv_clock.c) \
 
 #assembly files common to all targets
 ASM_SOURCE_FILES  = $(abspath ../../../../components/toolchain/gcc/gcc_startup_nrf51.s)
@@ -74,6 +76,8 @@ INC_PATHS += -I$(abspath ../../../../components/drivers_nrf/config)
 INC_PATHS += -I$(abspath ../../../../components/libraries/fifo)
 INC_PATHS += -I$(abspath ../../../../components/toolchain/gcc)
 INC_PATHS += -I$(abspath ../../../../components/properitary_rf/gzll)
+INC_PATHS += -I$(abspath ../../../../components/drivers_nrf/rtc)
+INC_PATHS += -I$(abspath ../../../../components/drivers_nrf/clock)
 
 OBJECT_DIRECTORY = _build
 LISTING_DIRECTORY = $(OBJECT_DIRECTORY)
