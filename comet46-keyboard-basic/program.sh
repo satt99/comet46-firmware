@@ -6,7 +6,7 @@ if [[ $? -ne 0 ]] ; then
     exit 0
 fi
 sleep 0.1
-HEX=`readlink -f ./custom/armgcc/_build/nrf51822_xxac.hex`
+HEX=`readlink -f _build/nrf51822_xxac.hex`
 du -b $HEX
 
 echo
