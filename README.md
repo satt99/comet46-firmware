@@ -61,7 +61,7 @@ It's best to remove the battery during long sessions of debugging, as charging n
 
 Launch a debugging session with:
 ```
-openocd -f comet46-firmware/nrf-stlink.cfg
+sudo openocd -f comet46-firmware/nrf-stlink.cfg
 ```
 Should give you an output ending in:
 ```
@@ -79,14 +79,14 @@ echo nrf51 mass_erase | telnet localhost 4444
 From there, the precompiled binaries can be loaded:
 ```
 echo reset halt | telnet localhost 4444
-echo flash write_image `readlink -f precompiled-basic-left.hex` | telnet localhost 4444
+echo flash write_image `readlink -f precompiled/basic-left.hex` | telnet localhost 4444
 echo reset | telnet localhost 4444
 ```
 
 ## Automatic make and programming scripts
 To use the automatic build scripts:
 ```
-cd comet46/comet46-keyboard-basic
+cd comet46-firmware/comet46-keyboard-basic
 ./program.sh
 ```
 An openocd session should be running in another terminal, as this script sends commands to it.
