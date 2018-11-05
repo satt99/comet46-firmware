@@ -3,7 +3,7 @@ Firmware for Nordic MCUs used in the Comet46 Keyboard, contains precompiled .hex
 
 The firmware was originally developed by [reversebias](https://github.com/reversebias) for the [Mitosis keyboard](https://github.com/reversebias/mitosis) and has been modified to work with Comet46.
 
-The firmware has been updated based on [repne's branch of mitosis](https://github.com/repne/mitosis).
+The firmware has been updated based on [repne's fork of mitosis](https://github.com/repne/mitosis).
 This update "should" extend the battery life from 1-2 months to 6 months. (Actual battery life is currently being tested.)
 
 ## Install dependencies
@@ -93,21 +93,3 @@ cd comet46-firmware/comet46-keyboard-basic
 sudo ./program.sh
 ```
 An openocd session should be running in another terminal, as this script sends commands to it.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
