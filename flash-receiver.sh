@@ -1,10 +1,12 @@
 #!/bin/bash
 echo
 echo '============================= PROGRAMMING ============================='
+HEX=`readlink -f precompiled/precompiled-basic-receiver.hex`
+du -b $HEX
 {
 	echo "reset halt";
 	sleep 0.1;
-	echo "flash write_image erase ./precompiled/precompiled-basic-receiver.hex";
+	echo "flash write_image erase $HEX";
 	sleep 10;
 	echo "reset";
 	sleep 0.1;
